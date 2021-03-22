@@ -1,0 +1,35 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: $body-color;
+  font-family: "Ubuntu";
+  color: #373b40;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

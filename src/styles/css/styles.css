@@ -1,0 +1,65 @@
+/*----------------------------------------*/
+/*  Job postings CSS */
+/*----------------------------------------*/
+.card {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: none; }
+  .card .job-title {
+    color: #6D6D6D;
+    font-size: 16px;
+    margin-bottom: 0; }
+  .card .company-name {
+    color: #FF5D2A;
+    font-size: 14px; }
+  .card .category {
+    color: #999999;
+    font-size: 14px; }
+  .card .created-date {
+    color: #999999;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0; }
+  .card .job-type {
+    color: #999999;
+    font-size: 14px; }
+  .card .location {
+    color: #999999;
+    font-size: 14px; }
+  .card .shuffle-btn {
+    background-color: #041E33 !important;
+    color: #FFFFFF !important;
+    font-weight: bold !important; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #F7F7F8;
+  font-family: "Ubuntu";
+  color: #373b40; }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 12px 0;
+  font-weight: 600; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+/*# sourceMappingURL=styles.css.map */

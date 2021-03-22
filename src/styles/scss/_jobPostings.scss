@@ -1,0 +1,42 @@
+/*----------------------------------------*/
+/*  Job postings CSS */
+/*----------------------------------------*/
+
+.card {
+  background-color: $white;
+  border-radius: 5px;
+  border: none;
+
+  .job-title {
+    color: $primary-font-color;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .company-name {
+    color: $danger-font-color;
+    font-size: 14px;
+  }
+  .category {
+    color: $secondary-font-color;
+    font-size: 14px;
+  }
+  .created-date {
+    color: $secondary-font-color;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .job-type {
+    color: $secondary-font-color;
+    font-size: 14px;
+  }
+  .location {
+    color: $secondary-font-color;
+    font-size: 14px;
+  }
+  .shuffle-btn {
+      background-color: #041E33 !important;
+      color: $white !important;
+      font-weight: bold !important;
+  }
+}
