@@ -9,7 +9,6 @@ export default function JobPosting() {
   const url = "https://api.rooster.jobs/core/public/jobs";
 
   const [jobs, setJobs] = useState([]);
-  const [shuffledJobs, setShuffledJobs] = useState([]);
 
   // initial render
   useEffect(() => {
@@ -21,9 +20,7 @@ export default function JobPosting() {
     axios
       .get(`${url}`)
       .then((response) => {
-        console.log(response);
-        const allJobs = response.data.body.results;
-        setJobs(allJobs);
+        setJobs(response.data.body.results);
       })
       .catch(err => {
         console.log(err);
@@ -44,10 +41,8 @@ export default function JobPosting() {
 
   // shuffle onclick function
   const shuffleJobs = () => {
-    setShuffledJobs(shuffle(jobs));
+    const shuffledJobs = shuffle([...jobs]);
     setJobs(shuffledJobs);
-    console.log(shuffledJobs);
-    console.log(jobs);
   };
 
   return (
@@ -57,7 +52,6 @@ export default function JobPosting() {
       <div class="row d-flex justify-content-center">
         <div class="col-12 col-lg-8 mb-5">
           <button
-            type="button"
             class="btn btn-dark btn-lg btn-block"
             onClick={() => shuffleJobs()}
           >
