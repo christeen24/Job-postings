@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="clip-placeholder">
+      <rect width="400" height="400"/>
+    </clipPath>
+  </defs>
+  <g id="placeholder" clip-path="url(#clip-placeholder)">
+    <rect width="400" height="400" fill="#f5fcf8"/>
+    <g id="Building_15" data-name="Building 15" transform="translate(-15.535 -21.002)">
+      <path id="Path_7364" data-name="Path 7364" d="M342.633,167.073H285.9V112.059a7.263,7.263,0,0,0-7.263-7.263H152.433a7.261,7.261,0,0,0-7.263,7.263v55.014H88.44a7.262,7.262,0,0,0-7.263,7.263v34.933a7.262,7.262,0,0,0,7.263,7.263h2.987V329.946a7.261,7.261,0,0,0,7.263,7.262H332.385a7.263,7.263,0,0,0,7.263-7.262V216.53h2.983a7.264,7.264,0,0,0,7.263-7.263V174.333A7.259,7.259,0,0,0,342.633,167.073ZM335.37,181.6v20.408H285.9V181.6Zm-38.614,96.095V263.167h16.7v14.525Zm16.706,17.348v14.525h-16.7V295.041Zm-16.706-49.222V231.294h16.7v14.525Zm-25.38-126.5v6.66H159.7v-6.66ZM117.609,277.693V263.167h16.7v14.525Zm16.706,17.348v14.525h-16.7V295.041Zm-16.706-49.222V231.294h16.7v14.525ZM95.7,181.6h49.471v20.408H95.7ZM159.7,322.681V140.506H271.377V322.681Z" transform="translate(0)" fill="#7e7e7e"/>
+      <rect id="Rectangle_426" data-name="Rectangle 426" width="14.525" height="32.892" transform="translate(242.074 152.85)" fill="#7e7e7e"/>
+      <rect id="Rectangle_427" data-name="Rectangle 427" width="14.525" height="32.892" transform="translate(208.274 152.85)" fill="#7e7e7e"/>
+      <rect id="Rectangle_428" data-name="Rectangle 428" width="14.525" height="32.892" transform="translate(174.473 152.85)" fill="#7e7e7e"/>
+      <rect id="Rectangle_429" data-name="Rectangle 429" width="14.525" height="32.893" transform="translate(242.074 214.236)" fill="#7e7e7e"/>
+      <rect id="Rectangle_430" data-name="Rectangle 430" width="14.525" height="32.893" transform="translate(208.274 214.236)" fill="#7e7e7e"/>
+      <rect id="Rectangle_431" data-name="Rectangle 431" width="14.525" height="32.893" transform="translate(174.473 214.236)" fill="#7e7e7e"/>
+      <rect id="Rectangle_432" data-name="Rectangle 432" width="14.525" height="32.892" transform="translate(242.074 275.623)" fill="#7e7e7e"/>
+      <rect id="Rectangle_433" data-name="Rectangle 433" width="14.525" height="32.892" transform="translate(208.274 275.623)" fill="#7e7e7e"/>
+      <rect id="Rectangle_434" data-name="Rectangle 434" width="14.525" height="32.892" transform="translate(174.473 275.623)" fill="#7e7e7e"/>
+    </g>
+  </g>
+</svg>

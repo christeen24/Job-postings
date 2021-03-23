@@ -6,6 +6,16 @@
   background-color: $white;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 30px #c8c8df !important;
+  }
+
+  .logo {
+      margin-top: 12px;
+      width: 40px;
+      border-radius: 5px;
+  }
 
   .job-title {
     color: $primary-font-color;

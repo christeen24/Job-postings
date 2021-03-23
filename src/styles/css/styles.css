@@ -4,7 +4,14 @@
 .card {
   background-color: #FFFFFF;
   border-radius: 5px;
-  border: none; }
+  border: none;
+  cursor: pointer; }
+  .card:hover {
+    box-shadow: 0 0 30px #c8c8df !important; }
+  .card .logo {
+    margin-top: 12px;
+    width: 40px;
+    border-radius: 5px; }
   .card .job-title {
     color: #6D6D6D;
     font-size: 16px;
