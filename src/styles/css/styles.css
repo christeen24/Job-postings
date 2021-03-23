@@ -33,10 +33,6 @@
   .card .location {
     color: #999999;
     font-size: 14px; }
-  .card .shuffle-btn {
-    background-color: #041E33 !important;
-    color: #FFFFFF !important;
-    font-weight: bold !important; }
 
 html {
   position: relative;
