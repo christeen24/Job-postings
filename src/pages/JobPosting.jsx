@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import moment from 'moment';
+import moment from "moment";
+import { Helmet } from "react-helmet";
 
 import CompanyDefault from "../assets/images/company_default.svg";
 
@@ -22,7 +23,7 @@ export default function JobPosting() {
       .then((response) => {
         setJobs(response.data.body.results);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -47,76 +48,88 @@ export default function JobPosting() {
 
   return (
     // start of body
-    <div class="container my-5 py-5">
-      {/* Start of shuffle button */}
-      <div class="row d-flex justify-content-center">
-        <div class="col-12 col-lg-8 mb-5">
-          <button
-            class="btn btn-dark btn-lg btn-block"
-            onClick={() => shuffleJobs()}
-          >
-            Shuffle jobs
-          </button>
+    <React.Fragment>
+      {/* dynamic helmet for seo content update */}
+      <Helmet>
+        <title>Job Posts</title>
+        <meta name="jobs" />
+      </Helmet>
+      {/* end of helmet */}
+      <div class="container my-5 py-5">
+        {/* Start of shuffle button */}
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-lg-8 mb-5">
+            <button
+              class="btn btn-dark btn-lg btn-block"
+              onClick={() => shuffleJobs()}
+            >
+              Shuffle jobs
+            </button>
+          </div>
         </div>
-      </div>
-      {/* End of shuffle button */}
-      {/* start of job list */}
-      <div class="row d-flex justify-content-center">
-        {/* map jobs array */}
-        {jobs.map((job) => (
-          // start of job div
-          <div class="col-12 col-lg-8" key={job.id}>
-            <div class="card mb-3 p-2">
-              <div class="d-flex flex-row">
-                {/* start of company logo */}
-                <div class="col-2 col-sm-1">
-                  {job.company.logo_url ? (
-                    <img src={job.company.logo_url} class="logo" />
-                  ) : (
-                    <img src={CompanyDefault} class="logo" />
-                  )}
-                </div>
-                {/* end of company logo */}
-                {/* start of job details */}
-                <div class="col-10 col-sm-11">
-                  {/* start of job title and created date */}
-                  <div class="d-sm-flex d-block justify-content-between">
-                    <h6 class="job-title">{job.title}</h6>
-                    <h6 class="created-date">
-                      <i class="fa fa-clock"></i> &nbsp;
-                      {moment.utc(job.updated_at).local().startOf('seconds').fromNow()}
-                    </h6>
+        {/* End of shuffle button */}
+        {/* start of job list */}
+        <div class="row d-flex justify-content-center">
+          {/* map jobs array */}
+          {jobs.map((job) => (
+            // start of job div
+            <div class="col-12 col-lg-8" key={job.id}>
+              <div class="card mb-3 p-2">
+                <div class="d-flex flex-row">
+                  {/* start of company logo */}
+                  <div class="col-2 col-sm-1">
+                    {job.company.logo_url ? (
+                      <img src={job.company.logo_url} class="logo" />
+                    ) : (
+                      <img src={CompanyDefault} class="logo" />
+                    )}
                   </div>
-                  {/* end of job title and created date */}
-                  {/* start of company name */}
-                  <h6 class="company-name">{job.company.name}</h6>
-                  {/* end of company name */}
-                  {/* start of job category */}
-                  <h6 class="category">
-                    {job.class} &gt; {job.subclass}
-                  </h6>
-                  {/* end of job category */}
-                  {/* start of job type */}
-                  <span class="job-type">
-                    <i class="fa fa-briefcase"></i> &nbsp;{job.job_type}
-                  </span>
-                  {/* end of job type */}
-                  &nbsp;&nbsp;
-                  {/* start of job location */}
-                  <span class="location">
-                    <i class="fa fa-globe"></i> &nbsp;{job.location}
-                  </span>
-                  {/* end of job location */}
+                  {/* end of company logo */}
+                  {/* start of job details */}
+                  <div class="col-10 col-sm-11">
+                    {/* start of job title and created date */}
+                    <div class="d-sm-flex d-block justify-content-between">
+                      <h6 class="job-title">{job.title}</h6>
+                      <h6 class="created-date">
+                        <i class="fa fa-clock"></i> &nbsp;
+                        {moment
+                          .utc(job.updated_at)
+                          .local()
+                          .startOf("seconds")
+                          .fromNow()}
+                      </h6>
+                    </div>
+                    {/* end of job title and created date */}
+                    {/* start of company name */}
+                    <h6 class="company-name">{job.company.name}</h6>
+                    {/* end of company name */}
+                    {/* start of job category */}
+                    <h6 class="category">
+                      {job.class} &gt; {job.subclass}
+                    </h6>
+                    {/* end of job category */}
+                    {/* start of job type */}
+                    <span class="job-type">
+                      <i class="fa fa-briefcase"></i> &nbsp;{job.job_type}
+                    </span>
+                    {/* end of job type */}
+                    &nbsp;&nbsp;
+                    {/* start of job location */}
+                    <span class="location">
+                      <i class="fa fa-globe"></i> &nbsp;{job.location}
+                    </span>
+                    {/* end of job location */}
+                  </div>
+                  {/* end of job etails */}
                 </div>
-                {/* end of job etails */}
               </div>
             </div>
-          </div>
-          // end of job div
-        ))}
+            // end of job div
+          ))}
+        </div>
+        {/* end of job list */}
       </div>
-      {/* end of job list */}
-    </div>
+    </React.Fragment>
     // end of body
   );
 }
